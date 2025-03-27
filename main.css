@@ -1,0 +1,251 @@
+html,body{
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: hsl(0, 0%, 98%); 
+}
+
+.upper_page{
+    width: 100%;
+    height: 40%;
+    background-image: url("./images/bg-desktop-light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mode_icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 38px;
+    cursor: pointer;
+}
+
+.to_do_input{
+    width: 540px;
+    border-radius: 8px;
+    height: 65px;
+    padding-left: 60px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 5px;
+    color: hsl(235, 19%, 35%);
+}
+
+.empty_circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid hsl(233, 11%, 84%);
+}
+
+#input_circle{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+
+
+
+
+.input-container{
+    display: flex;
+    position: relative;
+
+}
+
+.title{
+    color: white;
+    font-family: "Josefin Sans";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 12px;
+
+}
+
+.tasks{
+    width: 600px;
+    margin-top: 40px;
+    border-radius: 8px;
+    padding-top: 5px;
+    background-color: white;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.check_icon{
+    width: 11px;
+    height: 11px;
+    border-radius: 20px;
+    padding: 6px;
+    background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.task{
+    width: 93.4%;
+    height: auto;
+    background-color: white;
+    padding: 15px 20px 5px 20px;
+    display: flex;
+    gap:20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.task_discription{
+    color: hsl(235, 19%, 35%);
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 4px;
+    word-wrap: break-word; 
+    max-width: 80%; 
+}
+
+.checked_discription_light{
+    text-decoration: line-through;
+    color: hsl(235, 19%, 35% , 0.5) !important;
+}
+
+.checked_discription_dark{
+    text-decoration: line-through;
+    color: hsl(234, 24.60%, 77.60%, 0.4) !important;
+}
+
+.line{
+    width: 100%;
+    border: 1px solid hsl(236, 33%, 92%,0.5);
+    margin-bottom: 0px;
+}
+
+.remove{
+    position: absolute;
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    left: 550px;
+    top: 16px;
+    display: none;
+}
+
+.task:hover{
+    .remove{
+        display: block;
+    }
+}
+
+
+
+.task_footer{
+    width: 580px;
+    height: 55px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 0px 0px 8px 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.items_number{
+    color: hsl(235, 19%, 35% , 0.4);
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.categories{
+    display: flex;
+    gap: 20px;
+    color: hsl(234, 11%, 52%,0.7);
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7px;
+    margin-left: 120px;
+    margin-top: 1px;
+}
+
+.category{
+    cursor: pointer;
+}
+
+.category:hover{
+    color: hsl(235, 19%, 35%);
+}
+
+.clear{
+    color: hsl(235, 19%, 35% , 0.4);
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    margin-left: 90px;
+    cursor: pointer;
+}
+
+.clear:hover{
+    color: hsl(235, 19%, 35%);
+}
+
+.choosed_category{
+    color:  hsl(220, 98%, 61%) !important;
+}
+
+@media(max-width:620px){
+    .header{
+        width: 300px;
+    }
+    .input-container{
+        width: 300px;
+    }
+    .tasks{
+        width: 300px;
+    }
+    .task{
+        width: 250px ;
+    }
+    .task_footer{
+        width: 280px;
+    }
+    .clear{
+        margin-left: 25px;
+        font-size: 8px;
+    }
+    .categories{
+        margin-left: 30px;
+        font-size: 4px;
+    }
+    .items_number{
+        font-size: 9px;
+    }
+    .remove{
+        left: 265px;
+    }
+    .line{
+        width: 298px;
+    }
+
+    .task_discription{
+        max-width: 70%;
+    }
+}
